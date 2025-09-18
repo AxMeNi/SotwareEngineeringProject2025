@@ -1,10 +1,21 @@
-include iostream
+#include <iostream>
+#include <HelloProjConfig.h>
 
-void hello_world() {
-stdcout  Hello World!n;
+void hello_world() 
+{
+std::cout << "Hello World" << std::endl;
+}
+
+void print_version() {
+	std::cout << "project version is"
+		<< HelloProj_VERSION_MAJOR
+		<< ". "
+		<< HelloProj_VERSION_MINOR
+		<< std::endl;
 }
 
 int main()
 {
 hello_world();
+print_version();
 }
