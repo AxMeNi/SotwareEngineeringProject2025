@@ -1,3 +1,0 @@
-K:/S9/Software_engineering/software_engineering_project_2025/build/CMakeFiles/HelloWorld.dir
-K:/S9/Software_engineering/software_engineering_project_2025/build/CMakeFiles/ALL_BUILD.dir
-K:/S9/Software_engineering/software_engineering_project_2025/build/CMakeFiles/ZERO_CHECK.dir
