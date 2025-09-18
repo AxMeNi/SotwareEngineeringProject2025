@@ -9,11 +9,11 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 
 # export configuration to source code
-configure_file(HelloProjConfig.h.in HelloProjConfig.h)
+configure_file(cmake/HelloProjConfig.h.in HelloProjConfig.h)
 
 # add the executable target named HelloWorld
-add_executable(HelloWorld hello.cpp)
+add_executable(HelloWorld mains/hello.cpp)
 
 # add binary tree to the list of paths to search includes
-target_include_directories(HelloWorld
-PUBLIC "${PROJECT_BINARY_DIR}")
+target_include_directories(HelloWorld PUBLIC "${PROJECT_BINARY_DIR}")
+// QUAND ON FERA UN DIESE INCLUDE AVEC LES CHEVRONS, IL ACCEDERA AUX FICHIERS ENTRE LES CHEVRONS PRESENTS DANS LE BINARY DIR PRECISE CI-DESSUS (en l'occurrence le build)
