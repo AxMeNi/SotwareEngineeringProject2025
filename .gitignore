@@ -1,0 +1,7 @@
+build/
+.vs/
+Debug/
+Release/
+*.vcxproj.user
+*.opendb
+*.log
