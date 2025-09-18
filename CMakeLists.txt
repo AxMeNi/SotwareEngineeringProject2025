@@ -19,3 +19,13 @@ target_include_directories(HelloWorld PUBLIC "${PROJECT_BINARY_DIR}")
 
 # QUAND ON FERA UN DIESE INCLUDE AVEC LES CHEVRONS, IL ACCEDERA AUX FICHIERS ENTRE LES CHEVRONS PRESENTS DANS LE BINARY DIR PRECISE CI-DESSUS (en l'occurrence le build)
 # Le Project Binary Dir est précisé par défaut quand on fait le cmake .. dans build mais sinon quand on fait le cmake, si on veut préciser le PROJECT_BINARY_DIR on fait "cmake -B "path/to/build"" et si on eut préciser la source on rajoute "-S "path/to/source""
+
+#add libraries
+add_subdirectory(src/basic)
+
+#add executable
+option(HELLOWORD_WITH_EXECUTABLES "Compile mains" ON)
+if(HELLOWORD_WITH_EXECUTABLES)
+	message(STATUS "Configuring Hello World with executables")
+	add_subdirectory(mains)
+endif()
