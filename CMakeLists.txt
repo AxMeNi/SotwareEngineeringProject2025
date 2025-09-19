@@ -31,5 +31,30 @@ if(HELLOWORLD_WITH_TESTS)
 	# We are defining a bunch of tests by Calling Ctest
 	# enable_testing() will create a new Target called_testing
 	message(STATUS "Configuring HelloWorld with tests")
-	add_subdirectory(tests)
+	add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/../tests ${CMAKE_BINARY_DIR}/tests_build)
 endif()
+
+# create the package configuration file
+include(CMakePackageConfigHelpers)
+configure_package_config_file(
+	cmake/HelloProjConfig.cmake.in
+	HelloProjConfig.cmake
+	INSTALL_DESTINATION cmake/
+)
+
+#install project configuration file
+install(
+	FILES ${PROJECT_BINARY_DIR}/HelloProjConfig.cmake
+	DESTINATION cmake/
+	)
+
+
+# Configure CPack
+if(WIN32)
+	set(CPACK_GENERATOR "ZIP")
+else()
+	set(CPACK_GENERATOR "TGZ")
+endif()
+
+# This must always be last!
+include(CPack)
