@@ -31,7 +31,7 @@ if(HELLOWORLD_WITH_TESTS)
 	# We are defining a bunch of tests by Calling Ctest
 	# enable_testing() will create a new Target called_testing
 	message(STATUS "Configuring HelloWorld with tests")
-	add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/../tests ${CMAKE_BINARY_DIR}/tests_build)
+	add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/tests ${CMAKE_BINARY_DIR}/tests_build)
 endif()
 
 # create the package configuration file
