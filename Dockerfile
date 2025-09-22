@@ -1,3 +1,3 @@
 # Parent image from debian distribution
 FROM alpine
-CMD [“echo”, “Hello world!”]
+CMD ["echo", "Hello world!"]
