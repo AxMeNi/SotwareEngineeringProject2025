@@ -1,9 +1,12 @@
+## PARTIE 1 
 # Parent image from debian distribution
 FROM debian:stable-slim
 # Upgrade system and package manager
-RUN apt-get update && apt-get upgrade
+RUN apt-get update && apt-get upgrade -y
 # Install tools for C++
 RUN apt-get install -y cmake ninja-build build-essential
+
+## PARTIE 2
 # Copy source code here
 COPY . MyProject
 # Create building directory
