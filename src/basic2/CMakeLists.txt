@@ -1,9 +1,12 @@
 set(target_name basic)
 add_library(${target_name} STATIC "")
 target_sources(${target_name}
-	PRIVATE "${PROJECT_SOURCE_DIR}/src/basic/message.cpp"
+	PRIVATE "${PROJECT_SOURCE_DIR}/src/basic/building.cpp"
+	PRIVATE "${PROJECT_SOURCE_DIR}/src/basic/rock.cpp"
 
-	PRIVATE "${PROJECT_SOURCE_DIR}/include/basic/message.h"
+	PRIVATE "${PROJECT_SOURCE_DIR}/include/basic/rock.h"
+	PRIVATE "${PROJECT_SOURCE_DIR}/include/basic/dyn_array.h"
+	PRIVATE "${PROJECT_SOURCE_DIR}/include/basic/building.h"
 )
 target_include_directories(${target_name}
 	PUBLIC
@@ -15,10 +18,10 @@ target_include_directories(${target_name}
 export(TARGETS ${target_name} FILE 
 	${PROJECT_BINARY_DIR}/${target_name}_target.cmake )
 
-#install target lib
+#install target lib2
 install(TARGETS ${target_name}
 	EXPORT ${target_name}
-	DESTINATION lib
+	DESTINATION lib2
 )
 
 #install target export
