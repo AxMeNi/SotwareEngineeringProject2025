@@ -1,12 +1,12 @@
-set(target_name basic)
+set(target_name basic2)
 add_library(${target_name} STATIC "")
 target_sources(${target_name}
-	PRIVATE "${PROJECT_SOURCE_DIR}/src/basic/building.cpp"
-	PRIVATE "${PROJECT_SOURCE_DIR}/src/basic/rock.cpp"
+	PRIVATE "${PROJECT_SOURCE_DIR}/src/basic2/building.cpp"
+	PRIVATE "${PROJECT_SOURCE_DIR}/src/basic2/rock.cpp"
 
-	PRIVATE "${PROJECT_SOURCE_DIR}/include/basic/rock.h"
-	PRIVATE "${PROJECT_SOURCE_DIR}/include/basic/dyn_array.h"
-	PRIVATE "${PROJECT_SOURCE_DIR}/include/basic/building.h"
+	PRIVATE "${PROJECT_SOURCE_DIR}/include/basic2/rock.h"
+	PRIVATE "${PROJECT_SOURCE_DIR}/include/basic2/dyn_array.h"
+	PRIVATE "${PROJECT_SOURCE_DIR}/include/basic2/building.h"
 )
 target_include_directories(${target_name}
 	PUBLIC
