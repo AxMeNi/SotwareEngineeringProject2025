@@ -27,7 +27,7 @@ public:
     Building& operator=( const Building& rhs );
     ~Building();
 
-    const Rock* get_rock( int index ) const;
+    //const Rock* get_rock( int index ) const;
     bool swap_rock(
         Building partner, unsigned int this_index, unsigned int partner_index );
 
