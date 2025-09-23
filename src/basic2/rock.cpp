@@ -1,4 +1,4 @@
-#include <rock.h>
+#include <basic2/rock.h>
 
 int Rock::rock_counter_ = 0;
 
